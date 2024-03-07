@@ -2,14 +2,12 @@ package com.warren.fullstackbackend.controller;
 import com.warren.fullstackbackend.model.User;
 import com.warren.fullstackbackend.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController // used to create RESTful web services using Spring MVC.
+@CrossOrigin("http://localhost:3000") // used to share the resources from one domain to another domain.
 public class UserController {
     @Autowired // allows Spring to automatically inject dependencies into the class
     private UserRepository userRepository;
